@@ -1,0 +1,227 @@
+{
+  "contractName": "EthExchange",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/eamonn/Documents/fyp2/ethereum/contracts/EthExchange.sol\":\"EthExchange\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/eamonn/Documents/fyp2/ethereum/contracts/EthExchange.sol\":{\"keccak256\":\"0x267760b239d980db6bae562c366b42755d40ed0fa5cf82613da44ee661910d01\",\"urls\":[\"bzz-raw://4e45c7d0072c99565d4bcc96489f4f1fd0cbbb85832834f8ebef72b7c547d64a\",\"dweb:/ipfs/QmStsJkUu9Py92FE3A4FX8v18u3RM3yYcKhCHxLybatiE2\"]}},\"version\":1}",
+  "bytecode": "0x60c0604052601160808190527f457468657265756d2045786368616e676500000000000000000000000000000060a090815261003e9160009190610051565b5034801561004b57600080fd5b506100ec565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061009257805160ff19168380011785556100bf565b828001600101855582156100bf579182015b828111156100bf5782518255916020019190600101906100a4565b506100cb9291506100cf565b5090565b6100e991905b808211156100cb57600081556001016100d5565b90565b610171806100fb6000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806306fdde0314610030575b600080fd5b6100386100ad565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561007257818101518382015260200161005a565b50505050905090810190601f16801561009f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6000805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156101335780601f1061010857610100808354040283529160200191610133565b820191906000526020600020905b81548152906001019060200180831161011657829003601f168201915b50505050508156fea264697066735822122018d5effb1b29b67f36745f975c86b3f77448bced6b4e985b6b4181e1a697018f64736f6c63430006040033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806306fdde0314610030575b600080fd5b6100386100ad565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561007257818101518382015260200161005a565b50505050905090810190601f16801561009f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6000805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815292918301828280156101335780601f1061010857610100808354040283529160200191610133565b820191906000526020600020905b81548152906001019060200180831161011657829003601f168201915b50505050508156fea264697066735822122018d5effb1b29b67f36745f975c86b3f77448bced6b4e985b6b4181e1a697018f64736f6c63430006040033",
+  "sourceMap": "59:40:0:-:0;34:68;59:40;;34:68;59:40;;;;;;;;;;-1:-1:-1;;59:40:0;;:::i;:::-;;34:68;5:9:-1;2:2;;;27:1;24;17:12;2:2;34:68:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;34:68:0;;;-1:-1:-1;34:68:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "34:68:0:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;34:68:0;;;;;;;;;;;;;;;;12:1:-1;9;2:12;59:40:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;59:40:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;59:40:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\n\ncontract EthExchange {\n  string public name = \"Ethereum Exchange\";\n}",
+  "sourcePath": "/home/eamonn/Documents/fyp2/ethereum/contracts/EthExchange.sol",
+  "ast": {
+    "absolutePath": "/home/eamonn/Documents/fyp2/ethereum/contracts/EthExchange.sol",
+    "exportedSymbols": {
+      "EthExchange": [
+        5
+      ]
+    },
+    "id": 6,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "EthExchange",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "06fdde03",
+            "id": 4,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 5,
+            "src": "59:40:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "59:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "457468657265756d2045786368616e6765",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "80:19:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_10a2e7d32651f02e9fa654392ef3e830c7faba7cf7822b1381a32989dec02156",
+                "typeString": "literal_string \"Ethereum Exchange\""
+              },
+              "value": "Ethereum Exchange"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 6,
+        "src": "34:68:0"
+      }
+    ],
+    "src": "0:102:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/eamonn/Documents/fyp2/ethereum/contracts/EthExchange.sol",
+    "exportedSymbols": {
+      "EthExchange": [
+        5
+      ]
+    },
+    "id": 6,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "EthExchange",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "06fdde03",
+            "id": 4,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 5,
+            "src": "59:40:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "59:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "457468657265756d2045786368616e6765",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "80:19:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_10a2e7d32651f02e9fa654392ef3e830c7faba7cf7822b1381a32989dec02156",
+                "typeString": "literal_string \"Ethereum Exchange\""
+              },
+              "value": "Ethereum Exchange"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 6,
+        "src": "34:68:0"
+      }
+    ],
+    "src": "0:102:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.4+commit.1dca32f3.Emscripten.clang"
+  },
+  "networks": {
+    "1586028846278": {
+      "events": {},
+      "links": {},
+      "address": "0x0b989757DC0694A4c1faB9D5Ee0a474F05ceb275",
+      "transactionHash": "0xea3cdfc903662747148d6cb9e618311f2935b44a6da6f38bf81f9082c7a9ca89"
+    }
+  },
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-04-04T21:07:21.707Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,5 +1,5 @@
 const getWeb3 = require("../getWeb3");
-const Marketplace = require("../contracts/Marketplace.json");
+const EthExchange = require("../contracts/EthExchange.json");
 
 exports.retreive = async (req, res, next) => {
   try {
@@ -15,14 +15,14 @@ exports.retreive = async (req, res, next) => {
   }
 };
 
-exports.createItem = async (req, res, next) => {
-  const itemName = req.body.itemName;
-  const itemPrice = req.body.itemPrice;
+exports.createProduct = async (req, res, next) => {
+  const name = req.body.name
+  const price = req.body.price;
   
   try {
     const app = await getContractInstance();
     const accounts = await getAccounts();
-    const data = app.methods.createItem(itemName, itemPrice).send({ from: accounts[0] });
+    const data = app.methods.createProduct(itemName, itemPrice).send({ from: accounts[0] });
     res.status(200).json({
       response: data
     });
@@ -33,15 +33,17 @@ exports.createItem = async (req, res, next) => {
   }
 }
 
+
+
 async function getContractInstance() {
   try {
     const web3 = await getWeb3();
     const networkId = await web3.eth.net.getId();
-    const marketplace = await new web3.eth.Contract(
-      Marketplace.abi,
-      Marketplace.networks[networkId] && Marketplace.networks[networkId].address,
+    const exchange = await new web3.eth.Contract(
+      EthExchange.abi,
+      EthExchange.networks[networkId] && EthExchange.networks[networkId].address,
     );
-    return marketplace;
+    return exchange;
   } catch (error) {
     console.log(error.message);
   }

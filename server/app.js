@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const itemRoute = require("./routes/item");
+const accountRoute = require("./routes/account");
+const productRoute = require("./routes/product");
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api", itemRoute);
+app.use("/api", accountRoute);
+app.use("/api", productRoute);
 
 app.listen(8080);

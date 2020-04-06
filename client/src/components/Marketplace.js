@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import PostProduct from './CreateProduct';
 
 class Marketplace extends Component {
-
   render() {
-    return(
-       <h1>Marketplace</h1>
+    return (
+      <div>
+        <PostProduct/>
+      </div>
     );
   }
 }

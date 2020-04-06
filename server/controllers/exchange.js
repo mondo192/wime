@@ -1,16 +1,14 @@
 const getWeb3 = require("../getWeb3");
 const EthExchange = require("../contracts/EthExchange.json");
 
-exports.createProduct = async (req, res, next) => {
-  const productName = req.body.productName;
-  const productPrice = req.body.productPrice;
-
+exports.buyTokens = async (req, res, next) => {
+  const amount = req.body.amount;
   try {
-    const app = await getContractInstance();
+    const app = await getExchangeInstance();
     const accounts = await getAccounts();
-    const data = app.methods.createProduct(productName, productPrice).send({ from: accounts[0] });
+    const tokens = await app.methods.buyTokens().send({ from: accounts[0], value: amount });
     res.status(201).json({
-      response: data
+      response: tokens
     });
   } catch (error) {
     res.status(404).json({
@@ -19,9 +17,7 @@ exports.createProduct = async (req, res, next) => {
   }
 };
 
-
-
-async function getContractInstance() {
+async function getExchangeInstance() {
   try {
     const web3 = await getWeb3();
     const networkId = await web3.eth.net.getId();

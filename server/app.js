@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const accountRoute = require("./routes/account");
 const productRoute = require("./routes/product");
+const exchangeRoute = require("./routes/exchange");
 
 const app = express();
 
@@ -15,5 +16,6 @@ app.use((req, res, next) => {
 
 app.use("/api", accountRoute);
 app.use("/api", productRoute);
+app.use("/api", exchangeRoute);
 
 app.listen(8080);

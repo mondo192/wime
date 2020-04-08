@@ -12,14 +12,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      web3: ""
+      account: "",
+      balance: 0
     }
   }
 
   componentDidMount = async () => {
     try {
       const web3 = await getWeb3();
-      this.setState({ web3: web3 });
+      const accounts = await web3.eth.getAccounts();
+      this.setState({ account: accounts[0] });
+      const balance = await web3.eth.getBalance(this.state.account);
+      this.setState({ balance });
     } catch (error) {
       console.log(error.message);
     }
@@ -29,12 +33,12 @@ class App extends Component {
     return (
       <BrowserRouter>
         <React.Fragment>
-        <Navigation web3={ this.state.web3 }/>
+        <Navigation account={ this.state.account }/>
             <Switch>
               <Redirect from="/" to="/home" exact />
               <Route path="/home" component={ Home } />
               <Route path="/marketplace" component={ Marketplace } />
-              <Route path="/exchange" component={ TokenExchange } />
+              <Route path="/exchange" component={ TokenExchange }/>
             </Switch>
         </React.Fragment>
       </BrowserRouter>

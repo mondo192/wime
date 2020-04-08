@@ -10,14 +10,16 @@ class TokenExchange extends Component {
     }
   }
 
-  // onChangeHandler = event => {
-  //   this.setState({ [event.target.name]: event.target.value });
-  // }
+  onChangeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  }
 
   onSubmitHandler = async (event) => {
     event.preventDefault();
+    console.log(this.state);
+    
     try {
-      const response = await axios.post("/api/exchange", this.state);
+      const response = await axios.post("/api/exchange", this.state.etherTokens);
       console.log(response);
     } catch (error) {
       console.log(error.message);
@@ -30,21 +32,28 @@ class TokenExchange extends Component {
       <div>
         <h3>Token Exchange</h3>
         <form onSubmit={ this.onSubmitHandler }>
+          <label>Balance: {this.props.balance}</label>
           <div>
-            <input 
-              type="text" 
-              name="Input" 
-              // value={ etherTokens } 
-              // onChange={ this.onChangeHandler }
-            />
+            <label>
+              Ether Tokens:
+              <input 
+                type="number" 
+                name="etherTokens"
+                value={ etherTokens } 
+                onChange={ this.onChangeHandler }
+              />
+            </label>
           </div>
           <div>
-            <input 
-              type="text" 
-              name="Output" 
-              // value={ wimeTokens } 
-              // onChange={ this.onChangeHandler }
-            />
+            <label>
+              WiMe Tokens:
+              <input 
+                type="number" 
+                name="wimeTokens"
+                value={ wimeTokens } 
+                onChange={ this.onChangeHandler }
+              />
+            </label>
           </div>
           <button type="submit">Exchange</button>
         </form>

@@ -1,5 +1,6 @@
 const WiMeToken = artifacts.require("WiMeToken");
 const EthExchange = artifacts.require("EthExchange");
+const Marketplace = artifacts.require("Marketplace");
 
 module.exports = async (deployer) => {
   // Deploy token and set it props
@@ -11,4 +12,6 @@ module.exports = async (deployer) => {
   
   // transfer all tokens to exchange contract
   await token.transfer(ethExchange.address, await token.totalSupply());
+
+  await deployer.deploy(Marketplace, "WiMe Marketplace");
 };

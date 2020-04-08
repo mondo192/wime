@@ -17,6 +17,22 @@ exports.buyTokens = async (req, res, next) => {
   }
 };
 
+exports.sellTokens = async (req, res, next) => {
+  const amount = req.body.amount;
+  try {
+    const app = await getExchangeInstance();
+    const accounts = await getAccounts();
+    const tokens = await app.methods.sellTokens(amount).send({ from: accounts[0] });
+    res.status(201).json({
+      response: tokens
+    });
+  } catch (error) {
+    res.status(404).json({
+      response: error.message
+    });
+  }
+};
+
 async function getExchangeInstance() {
   try {
     const web3 = await getWeb3();
